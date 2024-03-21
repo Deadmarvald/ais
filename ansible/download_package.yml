@@ -1,0 +1,9 @@
+---
+- name: Download and install package
+  hosts: localhost
+  tasks:
+    - name: Install package
+      include_role:
+          name: deploy_apache_web
+      vars:
+        package: tree

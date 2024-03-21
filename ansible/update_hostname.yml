@@ -1,0 +1,7 @@
+---
+- hosts: VM
+  user: ivan
+  become: true
+  tasks:
+    - name: Change hostname
+      command: hostnamectl set-hostname ivan-volvenko-lab2

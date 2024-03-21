@@ -1,0 +1,15 @@
+---
+- name: Install package
+  become: true
+  when: ansible_os_family == 'Debian'
+  apt:
+    name: "{{ package }}"
+    state: present
+
+- name: Install package
+  become: true
+  when: ansible_os_family == 'RedHat'
+  yum:
+    name: "{{ package }}"
+    state: present
+
